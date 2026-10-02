@@ -1,4 +1,7 @@
 //DOM manipulation is the process of using computer code—most commonly JavaScript—to dynamically alter, add, delete, or modify the structure, content, and styling of a webpage.
+
+//const { forwardRef } = require("react");
+
 /*
 let x = 10;
 let y = 20;
@@ -83,7 +86,7 @@ console.log(document); //a detailed description of the parameters/behaviours use
 //console.log(title)
 //title.innerText = "EUREKA"
 
-*/
+
 let number = 0;
 function btnAddOnAction(){
     number++;
@@ -190,7 +193,7 @@ function addCustomerOnAction(){
     tblCustomer.innerHTML = body;
     //interpolation
 }
-
+*/
 
 ////////////////////////WEEK 09 STARTS FROM HERE///////////
 ///DOM -> The DOM is basically the browser's representation of your HTML page that JavaScript can interact with.
@@ -221,3 +224,44 @@ function submitOnAction(){
     userDetails.push(User)
     console.log(userDetails)
 }
+
+
+
+
+///////////////////////MAKING A TABLE////
+const userInfo = []
+function addCustomerOnAction(){
+    let txtName = document.getElementById("txtName").value
+    let txtAddress = document.getElementById("txtAddress").value
+    let txtAge = document.getElementById("txtAge").value
+    let txtEmail = document.getElementById("txtEmail").value
+    let txtSalary = document.getElementById("txtSalary").value
+
+    let Person = {
+        name : txtName,
+        address : txtAddress,
+        age : txtAge,
+        email : txtEmail,
+        salary : txtSalary
+    }
+    userInfo.push(Person)
+    console.log(userInfo)
+}
+
+function loadTableOnAction(){
+    let tblCustomer = document.getElementById("tblCustomer")
+    let body = "";
+    for(let i = 0; i < userInfo.length; i++){
+    body += `
+        <tr>
+            <td>${userInfo[i].name}</td>
+            <td>${userInfo[i].address}</td>
+            <td>${userInfo[i].age}</td>
+            <td>${userInfo[i].email}</td>
+            <td>${userInfo[i].salary}</td>
+        </tr>
+    `
+    }
+    tblCustomer.innerHTML = body
+}
+

@@ -37,7 +37,38 @@
         <input type="button" value="Submit" onClick="submitOnAction()">
         <br>
         </center>
+
+
+        <br>
+
+        <h1>Add Customer Form</h1>
+
+    <input type="text" placeholder="Enter your name" id="txtName">
+     <input type="text" placeholder="Enter your address" id="txtAddress">
+     <input type="text" placeholder="Enter your age" id="txtAge">
+     <input type="text" placeholder="Enter your email" id="txtEmail">
+     <input type="text" placeholder="Enter your salary" id="txtSalary">
+
+     <table border="1" id = "tblCustomer">
+        <th>name</th>
+        <th>address</th>
+        <th>age</th>
+        <th>email</th>
+        <th>salary</th>
+
+        <tr>
+            <td>Saman</td>
+            <td>Galle</td>
+            <td>25</td>
+            <td>saman@gmail.com</td>
+            <td>50000</td>
+        </tr>
         
+     </table>
+
+     <input type="button" value="Add Customer" onClick="addCustomerOnAction()">
+     <input type="button" value="Load Table" onClick="loadTableOnAction()">
+
     <script src="js/app.js"></script>
 </body>
 </html>
